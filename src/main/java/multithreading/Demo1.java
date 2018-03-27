@@ -3,6 +3,7 @@ package multithreading;
 public class Demo1 extends Thread{
 
     /**
+     * *by yaojianan
      * 使用Thread来操作线程 使用start来开始线程，执行线程中的run部分
      */
     public void run(){

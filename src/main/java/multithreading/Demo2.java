@@ -3,7 +3,7 @@ package multithreading;
 
 public class Demo2 {
     /**
-     * by yao
+     * by yaojianan
      * 使用runnable接口来实现多线程，
      * 需要注意的地方是 runnable需要借助Thread来实现，作为Thread的一个target存在，
      * 由于两者都有run方法，在target存在时，优先调用target的方法，否则才调用原始的run
