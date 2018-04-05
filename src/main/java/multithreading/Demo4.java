@@ -35,14 +35,14 @@ public class Demo4{
             //System.out.println(submit.get());
 
         //3·CompletionService 可以将已完成任务与未完成的任务分离出来 ExecutorCompletionService此类将安排那些完成时提交的任务，把它们放置在可使用 take 访问的队列上
-            // CompletionService<String> completionService = new ExecutorCompletionService<String>(executorService);
-            //completionService.submit(new Call1());
-            // Future<String> future =completionService.take();
-            //System.out.println(future.get());
+             CompletionService<String> completionService = new ExecutorCompletionService<String>(executorService);
+             completionService.submit(new Call1());
+             Future<String> future =completionService.take();
+             System.out.println(future.get());
 
         //4·submit一个runnable和一个callable的区别
-                Future<String> submit = (Future<String>) executorService.submit(new Run1());
-                System.out.println(submit.get());
+                //Future<String> submit = (Future<String>) executorService.submit(new Run1());
+                //System.out.println(submit.get());
 
         //最后需要关闭线程池哦
         // executor.shutdown();
