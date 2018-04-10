@@ -19,12 +19,12 @@ public class Demo5  {
      */
 
     //线程
-    static  class ForkJoinTest1 extends RecursiveTask{
+    static  class ForkJoinTest1 implements Callable{
         /**
          *  执行线程的代码块
          */
         @Override
-        protected Object compute() {
+        public Object call() {
             SumTest sumTest1 = new SumTest(1,2);
             SumTest sumTest2 = new SumTest(3,4);
             /**
