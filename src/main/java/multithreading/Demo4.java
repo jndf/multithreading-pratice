@@ -28,11 +28,11 @@ public class Demo4{
             ExecutorService executorService = Executors.newFixedThreadPool(10);
 
         //1·框架执行execute方法，来执行一个线程类，但是没有返回值
-            //executorService.execute(new Demo2.Runner1());
+            executorService.execute(new Demo2.Runner1());
 
         //2·使用submit执行线程，可以得到返回值
-            //Future<String> submit = executorService.submit(new Call1());
-            //System.out.println(submit.get());
+            Future<String> submit = executorService.submit(new Call1());
+            System.out.println(submit.get());
 
         //3·CompletionService 可以将已完成任务与未完成的任务分离出来 ExecutorCompletionService此类将安排那些完成时提交的任务，把它们放置在可使用 take 访问的队列上
              CompletionService<String> completionService = new ExecutorCompletionService<String>(executorService);
@@ -41,13 +41,14 @@ public class Demo4{
              System.out.println(future.get());
 
         //4·submit一个runnable和一个callable的区别
-                //Future<String> submit = (Future<String>) executorService.submit(new Run1());
-                //System.out.println(submit.get());
+        //主要是靠futureTask区别，具体见我的博客   https://blog.csdn.net/qq_34582693?viewmode=list
+        // 取消任务
+        // future.cancel();
 
-        //最后需要关闭线程池哦
+        // 线程池的关闭
         // executor.shutdown();
 
-        //使用lambda表达式进行代码优化
+        //使用lambda表达式对内部类进行代码优化
     }
 
 
