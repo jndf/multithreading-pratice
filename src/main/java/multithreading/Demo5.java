@@ -7,7 +7,7 @@ import java.util.concurrent.*;
  * 写一个Fork/join 多线程框架
  *
  */
-public class Demo5  {
+public class Demo5 {
     /**
      * ForkJoinTask：我们要使用ForkJoin框架，必须首先创建一个ForkJoin任务。
      * 它提供在任务中执行 fork() 和 join() 操作的机制，通常情况下我们不需要直接继承 ForkJoinTask 类，而只需要继承它的子类，Fork/Join 框架提供了以下两个子类：

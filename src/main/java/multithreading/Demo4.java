@@ -1,16 +1,12 @@
 package multithreading;
 
-import jdk.nashorn.internal.codegen.CompilerConstants;
-
-import java.util.ArrayList;
-import java.util.List;
 import java.util.concurrent.*;
 
 /**
  * 写一个Executor 多线程框架
  *
  */
-public class Demo4{
+public class Demo4 {
 
     /**
      * Executor包括四种创建线程池的对象

@@ -15,8 +15,8 @@ public class Demo1 extends Thread{
 
     public static void main(String[] args) {
         for (int i = 0;i<10;i++){
-            Demo1 demo1 = new Demo1();
-            demo1.start();
+            Demo1 threadTest = new Demo1();
+            threadTest.start();
         }
     }
 }
